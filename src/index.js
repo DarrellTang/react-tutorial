@@ -32,7 +32,7 @@ class Board extends React.Component {
     return (
       <Square
         value={this.state.squares[i]}
-        onClick={() => this.handleclick(i)}
+        onClick={() => this.handleClick(i)}
       />
     );
   }
@@ -94,10 +94,10 @@ function calculateWinner(squares){
     [0, 4, 8],
     [2, 4, 6],
   ];
-  
+
   for(let i=0; i<lines.length; i++){
     const [a, b, c] = lines[i];
-    if (squares[a] && squares [a] === squares[b] && squares[a] === squares[c]){
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]){
       return squares[a];
     }
   }
